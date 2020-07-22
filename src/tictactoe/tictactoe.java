@@ -14,6 +14,9 @@ public class tictactoe {
 	
 	public static void main(String[] args) {
 		
+		Scanner name = new Scanner(System.in);
+		System.out.println("Helo, what is your name?");
+		String playername = name.next();
 		
 		 char [][] gameBoard = {{' ','|',' ','|',' '},
 	               {'-','+','-','+','-'},	
@@ -26,7 +29,7 @@ public class tictactoe {
 		while(gameOn) {
 			
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter your placement (1-9):");
+		System.out.println(name + " ,Enter your placement (1-9):");
 		int playerPos = scan.nextInt();
 		
 		while(playerPossision.contains(playerPos) || cpuPossision.contains(playerPos)) {
